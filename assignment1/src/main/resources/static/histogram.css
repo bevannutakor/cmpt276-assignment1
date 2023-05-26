@@ -1,7 +1,65 @@
 .histogram-generator-group{
-    width: 50%;
+    width: 70%;
     margin: auto;
+    margin-top: 10vh;
+}
+
+.container{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    grid-gap: 5rem;
+    grid-gap: 1rem;
+}
+
+.bounds-container{
+    background-color: gainsboro;
+    padding-right: 10rem;
+}
+
+.label-input-group{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+    padding: 0.5rem 3rem;
+}
+
+.label-input-group input{
+    padding: 0.25rem 0.25rem;
+    width: 5rem;
+    text-align: right;
+}
+
+.histogram-container{
+    background-color: gainsboro;
+    padding-right: 10rem;
+}
+
+.histogram-container h3{
+    margin-top: -1px;
+}
+
+.red-heading{
+    color: crimson;
+    padding: 0.5rem 1rem;
+}
+
+.histogram-heading{
+    color: crimson;
+    padding-left: 1rem;
+    padding-top: 1.5rem
+}
+
+.histogram-form{
+    background-color: gainsboro;
+}
+
+.histogram-values-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 3rem;
+    padding: 0.5rem 3rem;
+}
+
+.new-grade-form{
+    margin-top: 3vh;
+    background-color: gainsboro;
 }
