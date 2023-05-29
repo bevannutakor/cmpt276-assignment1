@@ -16,51 +16,51 @@
                 <form>
                     <div class="label-input-group">
                         <label>Max</label>
-                        <input type="number" max="100" value="100.00"/>
+                        <input type="number" max="100" value="100.00" id="MaxInput" onchange="changeBounds(event)" class="bound-input"/>
                     </div>
                     <div class="label-input-group">
                         <label>A+</label>
-                        <input type="number" max="100" value="100.00"/>
+                        <input type="number" value="95.00" id="APlusInput" onchange="changeBounds(event)" class="bound-input"/>
                     </div>
                     <div class="label-input-group">
                         <label>A</label>
-                        <input type="number" max="100" value="100.00"/>
+                        <input type="number" max="100" value="90.00" id="AInput" onchange="changeBounds(event)" class="bound-input"/>
                     </div>
                     <div class="label-input-group">
                         <label>A-</label>
-                        <input type="number" max="100" value="100.00"/>
+                        <input type="number" max="100" value="85.00" id="AMinusInput" onchange="changeBounds(event)" class="bound-input"/>
                     </div>
                     <div class="label-input-group">
                         <label>B+</label>
-                        <input type="number" max="100" value="100.00"/>
+                        <input type="number" max="100" value="80.00" id="BPlusInput" onchange="changeBounds(event)" class="bound-input"/>
                     </div>
                     <div class="label-input-group">
                         <label>B</label>
-                        <input type="number" max="100" value="100.00"/>
+                        <input type="number" max="100" value="75.00" id="BInput" onchange="changeBounds(event)" class="bound-input"/>
                     </div>
                     <div class="label-input-group">
                         <label>B-</label>
-                        <input type="number" max="100" value="100.00"/>
+                        <input type="number" max="100" value="70.00" id="BMinusInput" onchange="changeBounds(event)" class="bound-input"/>
                     </div>
                     <div class="label-input-group">
                         <label>C+</label>
-                        <input type="number" max="100" value="100.00"/>
+                        <input type="number" max="100" value="65.00" id="CPlusInput" onchange="changeBounds(event)" class="bound-input"/>
                     </div>
                     <div class="label-input-group">
                         <label>C</label>
-                        <input type="number" max="100" value="100.00"/>
+                        <input type="number" max="100" value="60.00" id="CInput" onchange="changeBounds(event)" class="bound-input"/>
                     </div>
                     <div class="label-input-group">
                         <label>C-</label>
-                        <input type="number" max="100" value="100.00"/>
+                        <input type="number" max="100" value="55.00" id="CMinusInput" onchange="changeBounds(event)" class="bound-input"/>
                     </div>
                     <div class="label-input-group">
                         <label>D</label>
-                        <input type="number" max="100" value="100.00"/>
+                        <input type="number" max="100" value="50.00" id="DInput" onchange="changeBounds(event)" class="bound-input"/>
                     </div>
                     <div class="label-input-group">
                         <label>F</label>
-                        <input type="number" max="100" value="100.00"/>
+                        <input type="number" max="100" value="0.00" id="FInput" onchange="changeBounds(event)" class="bound-input"/>
                     </div>
                 </form>
             </div>
@@ -70,56 +70,56 @@
                     <h3 class="histogram-heading">Histogram</h3>
                     <div class="histogram-values-container">
                         <div>A+</div>
-                        <div>00000</div>
+                        <div id="Aplus">0</div>
                     </div>
                     <div class="histogram-values-container">
                         <div>A</div>
-                        <div>00000</div>
+                        <div id="A">0</div>
                     </div>
                     <div class="histogram-values-container">
                         <div>A-</div>
-                        <div>00000</div>
+                        <div id="Aminus">0</div>
                     </div>
                     <div class="histogram-values-container">
                         <div>B+</div>
-                        <div>00000</div>
+                        <div id="Bplus">0</div>
                     </div>
                     <div class="histogram-values-container">
                         <div>B</div>
-                        <div>00000</div>
+                        <div id="B">0</div>
                     </div>
                     <div class="histogram-values-container">
                         <div>B-</div>
-                        <div>00000</div>
+                        <div id="Bminus">0</div>
                     </div>
                     <div class="histogram-values-container">
                         <div>C+</div>
-                        <div>00000</div>
+                        <div id="Cplus">0</div>
                     </div>
                     <div class="histogram-values-container">
                         <div>C</div>
-                        <div>00000</div>
+                        <div id="C">0</div>
                     </div>
                     <div class="histogram-values-container">
                         <div>C-</div>
-                        <div>00000</div>
+                        <div id="Cminus">0</div>
                     </div>
                     <div class="histogram-values-container">
                         <div>D</div>
-                        <div>00000</div>
+                        <div id="D">0</div>
                     </div>
                     <div class="histogram-values-container">
                         <div>F</div>
-                        <div>00000</div>
+                        <div id="F">0</div>
                     </div>
                 </div>
-                <form class="new-grade-form">
+                <div class="new-grade-form">
                     <div style="padding: 4rem 3rem;">
                         <label>New Grade:</label>
-                        <input type="text"/>
-                        <button class="submit">Submit</button>
+                        <input type="number" id="newGradeInput"/>
+                        <button class="submit" onclick="submitGrade()">Submit</button>
                     </div>
-                </form>
+                </div>
             </div>
 
         </div>

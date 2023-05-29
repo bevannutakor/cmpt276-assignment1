@@ -22,7 +22,7 @@
     padding: 0.5rem 3rem;
 }
 
-.label-input-group input{
+.bound-input{
     padding: 0.25rem 0.25rem;
     width: 5rem;
     text-align: right;
