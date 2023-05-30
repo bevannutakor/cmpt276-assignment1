@@ -129,7 +129,30 @@ function submitGrade(){
 
 
 function changeBounds(event){
-    //check bounds with event.target.id then do logic
+    var target = Number(event.target.value)
+    var grades = document.getElementsByClassName("bound-input");
+    
+    if(target === Number(grades[0].value)){
+        if(target > 100 || target <= Number(grades[1].value)){
+            console.log("Invalid bounds");
+        }
+        return;
+    }
+
+    if(target === Number(grades[11].value)){
+        if(target < 0 || target >= Number(grades[11].value)){
+            console.log("Invalid Bounds");
+        }
+    }
+
+    for(var i=1; i<grades.length-1; i++){
+        if(target === Number(grades[i].value)){
+            if(target >= Number(grades[i-1].value) || target <= Number(grades[i+1].value) ){
+                console.log("Invalid bounds");
+                return;
+            }
+        }
+    }
     groupGrades()
 }
 
