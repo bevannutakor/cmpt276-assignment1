@@ -154,6 +154,7 @@ function changeBounds(event){
         if(target <= Number(grades[1].value)){
             errorMessage.innerHTML = "Invalid bounds - you have overlap with grade bounds below"
         }
+        errorMessage.innerHTML = ""
         return;
     }
 
@@ -161,7 +162,7 @@ function changeBounds(event){
         if(target < 0 || target >= Number(grades[11].value)){
             errorMessage.innerHTML = "Invalid bound - cannot have a grade less than 0"
         }
-
+        errorMessage.innerHTML = ""
         return;
     }
 
