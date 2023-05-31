@@ -38,12 +38,12 @@
 }
 
 .red-heading{
-    color: crimson;
+    color: #CC0633;
     padding: 0.5rem 1rem;
 }
 
 .histogram-heading{
-    color: crimson;
+    color: #CC0633;
     padding-left: 1rem;
     padding-top: 1.5rem
 }
@@ -59,7 +59,24 @@
     padding: 0.5rem 3rem;
 }
 
+.histogram-value{
+    color: white;
+    background: #CC0633;
+    text-align: center;
+}
+
 .new-grade-form{
     margin-top: 3vh;
     background-color: gainsboro;
+}
+
+.error-alert{
+    color: #CC0633
+}
+
+.submit{
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 0.5rem 1rem
 }

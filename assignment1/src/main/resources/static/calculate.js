@@ -37,6 +37,7 @@ var histogramValues = {
 
 function groupGrades(){
     initializeGradeBounds();
+
     for(var i=0; i<grades.length; i++){
         switch(true){
             case grades[i] <= gradeBounds.MaxInput && grades[i] >= gradeBounds.APlusInput:
@@ -121,8 +122,25 @@ function groupGrades(){
 
 }
 
+var errorMessage = document.getElementById("error-alert")
+
 function submitGrade(){
     var inputValue = document.getElementById("newGradeInput").value
+    if(Number(inputValue) < 0){
+        errorMessage.innerHTML = "Your input value is not valid, less than 0"
+        return;
+    }
+
+    if(inputValue === ""){
+        errorMessage.innerHTML = "Your input value is not a number";
+        return;
+    }
+
+    if(Number(inputValue) > gradeBounds.MaxInput){
+        errorMessage.innerHTML = "Your input value is not valid, your input exceeds the maximum grade bound";
+        return
+    }
+    errorMessage.innerHTML = ""
     grades.push(Number(inputValue));
     groupGrades();
 }
@@ -133,26 +151,29 @@ function changeBounds(event){
     var grades = document.getElementsByClassName("bound-input");
     
     if(target === Number(grades[0].value)){
-        if(target > 100 || target <= Number(grades[1].value)){
-            console.log("Invalid bounds");
+        if(target <= Number(grades[1].value)){
+            errorMessage.innerHTML = "Invalid bounds - you have overlap with grade bounds below"
         }
         return;
     }
 
     if(target === Number(grades[11].value)){
         if(target < 0 || target >= Number(grades[11].value)){
-            console.log("Invalid Bounds");
+            errorMessage.innerHTML = "Invalid bound - cannot have a grade less than 0"
         }
+
+        return;
     }
 
     for(var i=1; i<grades.length-1; i++){
         if(target === Number(grades[i].value)){
             if(target >= Number(grades[i-1].value) || target <= Number(grades[i+1].value) ){
-                console.log("Invalid bounds");
+                errorMessage.innerHTML = "Invalid bounds - you have overlap with other grade bounds. check to see if the input you changed is greater/equal to the inputs above it or less/equal to the inputs below it"
                 return;
             }
         }
     }
+    errorMessage.innerHTML = ""
     groupGrades()
 }
 
